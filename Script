@@ -1,0 +1,81 @@
+#include <iostream>
+using namespace std; 
+
+#define n 50;
+
+int main(){
+  int vet[n], int t;
+  listaficaVazia(vet);
+  do {
+    t = menu();
+    switch(t) {
+      case ' 1 '
+    }
+  }
+
+}
+
+int listaficaVazia(int vet[]){
+  for(int i=0; i<n; I++){
+    vet[i]=0;
+  }
+}
+
+bool listaVazia(int vet[]) {
+  if(!vet[0]) {
+  return true;
+  } else 
+  return false;
+}
+
+int insere(int vet[], int x) {
+  if(vet >= n){
+    cout << "Lista cheia" << endl;
+  } else {
+    cout << "Digite os valores para preencher a lista" << endl;
+   cin >> vet[x];
+   x++;
+  }
+    return x;
+}  
+
+int retira(int vet[], int x, int local) {
+   int x = 0, bool achei = false;
+  if(listaVazia(vet)) {
+    cout << "Lista Vazia" << endl;
+  } else { 
+      while( achei == false && x < n) {
+        if(vet[x] == achei) {
+          achei = true;
+        } else
+        x++;
+      }
+      if(achei) {
+        for(int i = x; i < local; i++){
+          vet[i-1] == vet[i];
+        }
+        local--;
+      }
+  }
+    return local;      
+}
+
+int imprime(int vet[], int x) {
+  if(listaVazia(vet)) {
+    cout << "Vazia" << endl;
+} else {
+    for (int i = 0; i < x; i++) {
+      cout << vet[i] << endl;
+    }
+}
+}
+
+
+int menu() {
+  int t;
+    cout << "Opções:" << endl;
+    cin >> t;
+    return t;
+
+
+}
